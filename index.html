@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday - Selamat Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Partikel animasi background -->
+    <div id="particles-js"></div>
+    
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="birthday-text" data-text="Happy Birthday">Happy Birthday</h1>
+            <p class="name-text">Pak Darsono Hadi Santoso</p>
+            <div class="countdown" id="countdown"></div>
+            <button class="celebrate-btn" onclick="startCelebration()">
+                <span>Mulai Perayaan</span>
+                <i class="fas fa-birthday-cake"></i>
+            </button>
+        </div>
+        
+        <!-- Confetti Canvas -->
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+    
+    <!-- Video Section -->
+    <section class="video-section" id="videoSection">
+        <div class="container">
+            <h2 class="section-title">Momen Spesial</h2>
+            <div class="video-container">
+                <video id="birthdayVideo" controls>
+                    <source src="Images/12.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Galeri Kenangan</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Images/1.jpg" alt="Foto 1">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Images/2.jpg" alt="Foto 2">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Images/3.jpg" alt="Foto 3">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Message Section -->
+    <section class="message-section">
+        <div class="container">
+            <h2 class="section-title">Pesan Spesial</h2>
+            <div class="message-card">
+                <p>Selamat ulang tahun! Semoga hari ini menjadi awal dari tahun yang penuh kebahagiaan, kesuksesan, dan petualangan baru. Terima kasih telah menjadi bagian penting dalam hidup kami.</p>
+                <p class="signature">- CCRM</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal untuk Gallery -->
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <!-- Audio Player (Hidden) -->
+    <audio id="backgroundMusic" loop>
+        <source src="path-to-your-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Music Control -->
+    <div class="music-control">
+        <button onclick="toggleMusic()" id="musicToggle">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
